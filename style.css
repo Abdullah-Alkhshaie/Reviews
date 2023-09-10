@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background-color: #f4f5f9;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container h1 {
+  margin-bottom: 60px;
+  letter-spacing: 3px;
+}
+.container h1::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 5px;
+  background-color: #88a5fb;
+  top: 53px;
+  left: 40%;
+}
+.card {
+  background-color: #fff;
+  width: 600px;
+  height: 350px;
+  padding: 22px;
+  box-shadow: 0px 0px 8px -5px;
+  border-radius: 4px;
+}
+.card .info {
+  text-align: center;
+}
+.card .info img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.card .info .image::before {
+  content: "";
+  width: 23%;
+  height: 29%;
+  position: absolute;
+  background-color: #88a5fb;
+  border-radius: 50%;
+  left: 40%;
+  top: 27%;
+}
+.card .info .image::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  /* content: "”";
+  font-weight: 900; */
+  position: absolute;
+  top: 27%;
+  left: 39%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  transform: translateY(25%);
+  color: white;
+  place-items: center;
+  border-radius: 50%;
+  background: #88a5fb;
+}
+h4 {
+  letter-spacing: 3px;
+  margin: 0;
+}
+span {
+  font-size: 12px;
+  color: #7a87b5;
+}
+
+p {
+  color: #7d8197;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+
+.icons .prev i,
+.icons .next i {
+  color: #7d81978c;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px;
+  color: #7d8197;
+  border-radius: 10px;
+  border: solid 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #afb5ca;
+}
+
+@media (max-width: 644px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 300px;
+    height: 100%;
+  }
+
+  .card .info .image::before {
+    content: "";
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-color: #88a5fb;
+    border-radius: 50%;
+    left: 30%;
+    top: 24%;
+  }
+  .card .info .image::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
+    position: absolute;
+    top: 27%;
+    left: 25%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    transform: translateY(25%);
+    color: white;
+    place-items: center;
+    border-radius: 50%;
+    background: #88a5fb;
+  }
+}
